@@ -1,0 +1,169 @@
+{% extends "index.html" %}
+{% block content %}
+
+ <div class = container-fluid>
+  <div class = "row-fluid">
+       <!-- genre menu -->
+      <!--#genre-menu-select-main-->
+        <div class="col-sm-12 col-xs-12 col-lg-4 col-md-4"
+        data-step="1" data-intro="This will help you to filter data after games genre" style="font-weight: normal" data-position="right">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    Select a genre
+                </div>
+                <div class="chart-stage text-center">
+                    <div id="genre-menu-select-main" class="dc-select-menu"></div>
+                </div>
+            </div>
+        </div>
+        <!-- platform menu -->
+        <!-- #platform-menu-select-main-->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
+        data-step="2" data-intro="This will help you to filter data after games platform" style="font-weight: normal" data-position="right">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    Select a platform
+                </div>
+                <div class="chart-stage text-center">
+                    <div id="platform-menu-select-main" class="dc-select-menu"></div>
+                </div>
+            </div>
+        </div>
+        <!-- name menu -->
+        <!-- #name-menu-select-main -->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
+        data-step="3" data-intro="You can choose your favorite game to find more about it" style="font-weight: normal" data-position="right">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    Select a game
+                </div>
+                <div class="chart-stage text-center">
+                    <div id="name-menu-select-main" class="dc-select-menu"></div>
+                </div>
+            </div>
+        </div>
+    </div><!--main.html 3 X menu select -->
+
+  <!--CHARTS -->
+  <div class="row-fluid">
+        <!-- sales chart  -->
+        <!-- #sales-line-chart  -->
+        <div class="col-sm-12 col-xs-12 col-lg-8 col-md-8"
+         data-step="4" data-intro="This line graph display the sales, in millions USD, on each region. The small graph is used to display the global sales and also, you can select just the years that interest you. Click and drag to select your preferred time period" style="font-weight: normal" data-position="right">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    <i class="fa fa-bar-chart"></i> Sales on region
+                </div>
+                <div class="chart-stage">
+                    <div id="sales-line-chart"></div>
+                    <div id="volume-games-line-chart"></div>
+                </div>
+            </div>
+        </div>
+        <!-- rating pie -->
+        <!-- #rating-pie-chart -->
+        <div class="col-sm-12 col-xs-12 col-lg-4 col-md-4"
+         data-step="5" data-intro="The chart display the ratings established by ESRB (Entertainment Software Rating Board). For more information please visit 'http://www.esrb.org/ratings/ratings_guide.aspx'" style="font-weight: normal" data-position="left">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    <i class="fa fa-pie-chart"></i> Rating
+                </div>
+                <div class="chart-stage">
+                    <div id="rating-pie-chart"></div>
+                </div>
+            </div>
+        </div>
+        <!-- total sales number display-->
+        <!-- #sales-nd -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"
+         data-step="6" data-intro="Display the total sales in millions USD" style="font-weight: normal" data-position="right">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    Total Sales (millions)
+                </div>
+                <div class="chart-stage">
+                    <div id="sales-nd"></div>
+                </div>
+            </div>
+        </div>
+        <!-- total games number display-->
+        <!-- #games-nd -->
+        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6"
+         data-step="7" data-intro="Display the total number of games released" style="font-weight: normal" data-position="left">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    Number of games
+                </div>
+                <div class="chart-stage">
+                    <div id="games-nd"></div>
+                </div>
+            </div>
+        </div>
+        <!--game releases by platform-->
+        <!-- #releases-platform-bar-chart -->
+       <div class="col-sm-12 col-xs-12 col-lg-8 col-md-8"
+         data-step="8" data-intro="This bar chart displays total number of released games on each platform" style="font-weight: normal" data-position="right">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    <i class="fa fa-bar-chart"></i> Game Releases By Platform
+                </div>
+                <div class="chart-stage">
+                    <div id="releases-platform-bar-chart"></div>
+                </div>
+            </div>
+        </div>
+        <!--the best selling games in the world row chart-->
+        <!-- #top-games-sales-row-chart-->
+        <div class="col-sm-12 col-xs-12 col-lg-4 col-md-4"
+         data-step="9" data-intro="This row chart display the best selling games in the world" style="font-weight: normal" data-position="left">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    <i class="fa fa-bar-chart"></i> The best selling games in the world
+                </div>
+                <div class="chart-stage">
+                    <div id="top-games-sales-row-chart"></div>
+                </div>
+            </div>
+        </div>
+      <!--the best rated games by users row chart-->
+        <!-- #top-games-user-score-row-chart-->
+        <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3"
+         data-step="10" data-intro="This row chart display the best related games in the world by user" style="font-weight: normal" data-position="right">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    <i class="fa fa-bar-chart"></i> The best rated games by users
+                </div>
+                <div class="chart-stage">
+                    <div id="top-games-user-score-row-chart"></div>
+                </div>
+            </div>
+        </div>
+        <!--the best rated games by users row chart-->
+        <!-- #top-games-critic-score-row-chart-->
+        <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3"
+         data-step="11" data-intro="This row chart display the best related games in the world by critics" style="font-weight: normal" data-position="right">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                   <i class="fa fa-bar-chart"></i>  The best rated games by critics
+                </div>
+                <div class="chart-stage">
+                    <div id="top-games-critic-score-row-chart"></div>
+                </div>
+            </div>
+        </div>
+        <!--game sales by region and genre chart-->
+        <!--  #sales-by-region-genre-chart -->
+        <div class="col-sm-12 col-xs-12 col-lg-6 col-md-6"
+         data-step="12" data-intro="This chart display total sales in millions USD by region and also by genre " style="font-weight: normal" data-position="left">
+            <div class="chart-wrapper text-center">
+                <div class="chart-title">
+                    <i class="fa fa-bar-chart"></i> Game sales by Region and Genre
+                </div>
+                <div class="chart-stage">
+                    <div id="sales-by-region-genre-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div> <!--/CHARTS-->
+ </div> <!--/container-fluid-->
+{% endblock %}

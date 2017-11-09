@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Tags Begin -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A dashboard showing video games statistics">
+    <meta name="author" content="Crina Varlan">
+
+    <!-- Meta Tags End -->
+    <title>Video Games Dashboard</title>
+
+    <!--css links -->
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/main.css')}}">
+  <link rel="stylesheet" href="{{url_for ('static', filename='lib/css/introjs.css')}}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="application">
+
+    <div id = "navbar_games" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./">
+                    <img class ="nav_img" src="{{ url_for ('static', filename='images/ghost-512.png') }}">
+                    <strong> Video Games</strong> Dashboard
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url_for('index') }}"><i class="fa fa-bar-chart" style=";color:white"></i><strong> Charts</strong></a></li>
+                        <li><a href="{{ url_for('data') }}"><i class="fa fa-copy" style=";color:white"></i><strong> Data Table</strong></a></li>
+                        <li><a id="intro-start" href='javascript:introJs().start();'><i class="fa fa-cab" style=";color:white"></i><strong> Take a tour!</strong></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--Reset all button-->
+                        <li><a href='javascript:dc.filterAll();dc.redrawAll();' title="Reset all data">
+                            <img class ="nav_img" alt="Reset" src="{{ url_for ('static', filename='images/reset-icon.png') }}">
+                            <strong>Reset All</strong></a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+<!-- Content end -->
+   <!-- JS links -->
+  <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/intro.js')}}" type="text/javascript"></script>
+</body>
+</html>
