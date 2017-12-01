@@ -64,7 +64,7 @@ function makeGraphs(error, videoGamesProjects) {
     var minGlobalSale = globalSalesDim.bottom(1)[0]["global_sale"];
     var maxGlobalSale = globalSalesDim.top(1)[0]["global_sale"];
 
-    // Charts in  main.html
+    // charts
     var salesChart = dc.lineChart("#sales-line-chart");
     var ratingChart = dc.pieChart("#rating-pie-chart");
     var volumeGamesChart = dc.barChart("#volume-games-line-chart");
@@ -158,7 +158,7 @@ function makeGraphs(error, videoGamesProjects) {
         .ordinalColors(["#676766"])
         .yAxis().ticks(7);
 
-     // the best selling games in the world row chart    // game sales by region and genre
+     // game sales by region and genre
      salesRegionGenreChart
         .width(550)
         .height(200)
@@ -177,6 +177,7 @@ function makeGraphs(error, videoGamesProjects) {
         .ordinalColors(["#47ACB1", "#F26522", "#F9AA7B", "#A5A8AA", "#676766", "#ADD5D7", "#FFE8AF", "#FFCD33"])
         .legend(dc.legend().x(95).y(10).itemHeight(13).gap(5));
 
+    // the best selling games in the world row chart
      topGamesBySalesChart
         .width(350)
         .height(200)
@@ -229,29 +230,6 @@ function makeGraphs(error, videoGamesProjects) {
             return d;
         })
         .group(all);
-    dc.dataTable("#data-table")
-        .width(650)
-        .height(800)
-        .dimension(nameDim)
-        .group(function(d) {return d["name"];})
-        .columns([
-            function(d) {return d.name;},
-            function(d) {return d.platform;},
-            function(d) {return d.year;},
-            function(d) {return d.genre;},
-            function(d) {return d.NA_sales;},
-            function(d) {return d.EU_sales;},
-            function(d) {return d.JP_sales;},
-            function(d) {return d.other_sales;},
-            function(d) {return d.global_sales;},
-            function(d) {return d.critic_score;},
-            function(d) {return d.user_score;},
-            function(d) {return d.user_count;},
-            function(d) {return d.developer;},
-            function(d) {return d.rating;}
-        ])
-        .sortBy(function(d){ return d["name"]; })
-        .order(d3.descending);
 
    dc.renderAll();
 }
