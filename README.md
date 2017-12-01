@@ -4,9 +4,9 @@ Have you ever wondered how much money your favorite video game is making? The pu
 In this project you can find a data visualisation which use a dataset from www.kaggle.com/datasets that contain information regarding games sales around the world.
 **The dashboard give you the opportunity to  explore and find more about subject in an interactive manner**.
 
-* **All charts are connected, so you will be able to filter data and find what interests you more**.
+**All charts are connected, so you will be able to filter data and find what interests you more**.
 
-#### Technologies
+## Technologies
 * Crossfilter.js - used to manipulate the donations data
 * DC.js - built to work natively with crossfilter rendered using d3.js
 * D3.js - used to render the interactive graphs
@@ -45,23 +45,21 @@ Type | Title |
 **Row chart** | The best rated games by critics
 **Bar chart** | Game sales by Region and Genre
 
-### **Testing:**
+## **Testing:**
 I have tested the responsive part using Blisk which is a useful toolbox for development, debugging and testing,
 
 ## Instructions
 
 #### Run the MongoDB Server:
     - install MongoDB, you can find it [here] (https://www.mongodb.com/download-center?jmp=nav#community)
-    - run the command in Terminal/Command Prompt `'mongod --config [PATH]\_mongoDB_data\_config\_mongodb_config.conf'`
+    - run the command in Terminal/Command Prompt `mongod --config [PATH]\_mongoDB_data\_config\_mongodb_config.conf`
 
 #### Upload data file(.csv):
     - in your Terminal/Command Prompt type mongod to have your server running
     - copy the csv file in the same directory as the project
     - open another Terminal/Command Prompt
-    - create a database and upload csv file with the next command
-    `'mongoimport  -d videoGames -c videoGames --type csv --file video_games_sales.csv
-    --headerline'`
-
+    - create a database and upload csv file with the next command `mongoimport  -d videoGames -c videoGames --type csv --file video_games_sales.csv
+    --headerline`
     - videogames - the database created
     - projects - collection name
     - headerline - treat the first record imported as the field names
