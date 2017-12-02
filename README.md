@@ -17,7 +17,7 @@ In this project you can find a data visualisation which use a dataset from www.k
 * intro.js - create a step-by-step guide that assigns an interactive pop-up tooltip to graphs
 
 Live version of the data dashboard is available on Heroku:
-
+**https://video-games-dashboard.herokuapp.com/**
 
 ## Structure
 This project is formed by three parts:
@@ -51,15 +51,16 @@ I have tested the responsive part using Blisk which is a useful toolbox for deve
 ## Instructions
 
 #### Run the MongoDB Server:
-    - install MongoDB, you can find it [here] (https://www.mongodb.com/download-center?jmp=nav#community)
-    - run the command in Terminal/Command Prompt `mongod --config [PATH]\_mongoDB_data\_config\_mongodb_config.conf`
+    - install MongoDB, you can find it [here](https://www.mongodb.com/download-center?jmp=nav#community)
+    - run the command in Terminal/Command Prompt
+    `mongod --config [PATH]\_mongoDB_data\_config\_mongodb_config.conf`
 
 #### Upload data file(.csv):
     - in your Terminal/Command Prompt type mongod to have your server running
     - copy the csv file in the same directory as the project
     - open another Terminal/Command Prompt
-    - create a database and upload csv file with the next command `mongoimport  -d videoGames -c videoGames --type csv --file video_games_sales.csv
-    --headerline`
+    - create a database and upload csv file with the next command
+    `mongoimport  -d videoGames -c videoGames --type csv --file video_games_sales.csv--headerline`
     - videogames - the database created
     - projects - collection name
     - headerline - treat the first record imported as the field names
@@ -69,7 +70,5 @@ I have tested the responsive part using Blisk which is a useful toolbox for deve
 For virtualenv to install all files in the requirements.txt file.
 
 1.  cd to the directory where requirements.txt is located
-
 2.  activate your virtualenv
-
 3.  run: `pip install -r requirements.txt` in your shell
