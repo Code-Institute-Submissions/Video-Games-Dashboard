@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/main.css')}}">
   <link rel="stylesheet" href="{{url_for ('static', filename='lib/css/introjs.css')}}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body class="application">
 
@@ -37,7 +38,7 @@
                     <strong> Video Games</strong> Dashboard
                 </a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url_for('index') }}"><i class="fa fa-bar-chart" style=";color:white"></i><strong> Charts</strong></a></li>
                         <li><a id="intro-start" href='javascript:introJs().start();'><i class="fa fa-cab" style=";color:white"></i><strong> Take a tour!</strong></a></li>
