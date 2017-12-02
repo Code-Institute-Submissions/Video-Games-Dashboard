@@ -59,7 +59,7 @@ body.application {
 }
 .nav_img {
         height: 30px;
-        margin: 0;
+        margin-left: -10px;
         padding: 0;
 }
 
