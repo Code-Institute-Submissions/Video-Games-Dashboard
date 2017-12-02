@@ -51,19 +51,17 @@ I have tested the responsive part using Blisk which is a useful toolbox for deve
 ## Instructions
 
 #### Run the MongoDB Server:
-    - install MongoDB, you can find it [here](https://www.mongodb.com/download-center?jmp=nav#community)
-    - run the command in Terminal/Command Prompt
-    `mongod --config [PATH]\_mongoDB_data\_config\_mongodb_config.conf`
+    1. install MongoDB, you can find it [here](https://mongodb.com/download-center?jmp=nav#community)
+    2. run the command in Terminal/Command Prompt `mongod --config [PATH]\_mongoDB_data\_config\_mongodb_config.conf`
 
 #### Upload data file(.csv):
-    - in your Terminal/Command Prompt type mongod to have your server running
-    - copy the csv file in the same directory as the project
-    - open another Terminal/Command Prompt
-    - create a database and upload csv file with the next command
-    `mongoimport  -d videoGames -c videoGames --type csv --file video_games_sales.csv--headerline`
-    - videogames - the database created
-    - projects - collection name
-    - headerline - treat the first record imported as the field names
+    1. in your Terminal/Command Prompt type mongod to have your server running
+    2. copy the csv file in the same directory as the project
+    3. open another Terminal/Command Prompt
+    4. create a database and upload csv file with the next command `mongoimport  -d videoGames -c videoGames --type csv --file video_games_sales.csv--headerline`
+    5. videogames - the database created
+    6. projects - collection name
+    7. headerline - treat the first record imported as the field names
 
 #### Running the requirements.txt to install needed packages:
 
