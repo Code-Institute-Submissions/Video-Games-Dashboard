@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Tags Begin -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A dashboard showing video games statistics">
+    <meta name="author" content="Crina Varlan">
+
+    <!-- Meta Tags End -->
+    <title>Video Games Dashboard</title>
+
+    <!--css links -->
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/main.css')}}">
+  <link rel="stylesheet" href="{{url_for ('static', filename='lib/css/introjs.css')}}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body class="application">
+
+    <div id = "navbar_games" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./">
+                    <img class ="nav_img" src="{{ url_for ('static', filename='images/ghost-512.png') }}">
+                    <strong> Video Games</strong> Dashboard
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url_for('index') }}"><i class="fa fa-bar-chart" style=";color:white"></i><strong> Charts</strong></a></li>
+                        <li><a href="{{ url_for('about') }}"><i class="fa fa-lightbulb-o" style=";color:white"></i><strong> About</strong></a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+<div class="about">
+		<div class="container">
+			<h2>About Us</h2>
+			<div class="about-text">
+				<div class="about-text-left col-md-6">
+                    <img class ="img-responsive" src="{{ url_for ('static', filename='images/graph.png') }}">
+				</div>
+				<div class="about-text-right col-md-6">
+					<h4>test</h4>
+					<p>text</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="about-grids">
+            <hr/>
+			 <div class="abt-sec about_span col-md-3">
+				 <div class="num-heading">
+					   <div class="number">
+							<figure><span>1</span></figure>
+					   </div>
+					  <div class="heading">
+						  <h4>Our motivation</h4>
+					  </div>
+					  <div class="clearfix"></div>
+				 </div>
+				 <div class="heading-desc">
+					 <p> We want to spread enthusiasm, to offer information displayed in an interactive and in fun way </p>
+				 </div>
+			 </div>
+			 <div class="abt-sec about_span col-md-3">
+				 <div class="num-heading">
+					   <div class="number">
+							<figure><span>2</span></figure>
+					   </div>
+					  <div class="heading">
+						  <h4>Our scope</h4>
+					  </div>
+					  <div class="clearfix"></div>
+				 </div>
+				 <div class="heading-desc">
+					 <p>Our scope is to offer details regarding games from sales perspective.
+                         We want to make it easy and interactive for every one how
+                         in interested to find more about games</p>
+				 </div>
+
+			 </div>
+			 <div class="col-md-3 abt-sec about_span">
+				 <div class="num-heading">
+					   <div class="number">
+							<figure><span>3</span></figure>
+					   </div>
+					  <div class="heading">
+						  <h4>Our strengths</h4>
+					  </div>
+					  <div class="clearfix"></div>
+				 </div>
+				 <div class="heading-desc">
+					 <p>Our enthusiasm and creativity are the starting points that lead us to success.</p>
+				 </div>
+			 </div>
+			 <div class="col-md-3 abt-sec about_span">
+				 <div class="num-heading">
+					   <div class="number">
+							<figure><span>4</span></figure>
+					   </div>
+					  <div class="heading">
+						  <h4>Our values</h4>
+					  </div>
+					  <div class="clearfix"></div>
+				 </div>
+				 <div class="heading-desc">
+					 <p>Our values are part of our DNA. They guide the way we work. Through integrity,
+                         passion, humility, simplicity and a focus on success, we have created a vibrant
+                         company culture.</p>
+				 </div>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+		</div>
+</div>
+
+    <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
+
+</body>
+</html>

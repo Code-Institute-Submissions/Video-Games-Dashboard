@@ -81,6 +81,94 @@ body.application {
 .dc-legend {
     font-size: 10px;
 }
+.about h2 {
+    font-size:2.5em;
+    margin: 0;
+    color: #f4f7f9;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+.about{
+	padding:1.5em 0;
+}
+.about-text{
+	margin-top: 3em;
+}
+.about-text-left img {
+	width: 100%;
+}
+.about-info-left:nth-child(1){
+	padding-left: 0;
+}
+.about-text-right h4 {
+    color: #ffdd57;
+    font-size: 1.5em;
+    line-height: 1.4em;
+}
+.about-text-right p {
+  color: #999;
+  font-size:0.9em;
+  line-height: 1.8em;margin-top: 1em;
+}
+.about-text-right ul {
+	padding: 0;
+}
+.about-text-right ul li {
+  display: block;
+  padding-left: 1.5em;
+  margin: 1em 0 0;
+}
+.about-text-right ul li a{
+  color: #999;
+  font-size:0.9em;
+}
+.about-text-right ul li a:hover{
+	color: #f4f7f9;
+    padding-left: 15px;
+	text-decoration:none;
+}
+.about-grids {
+    margin:8em 0;
+}
+.number {
+	float: left;
+	background: #999;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	height: 45px;
+	width: 45px;
+    opacity: 0.7;
+}
+.number figure {
+  text-align: center;
+}
+.number figure span {
+  font-size: 1.2em;
+	line-height: 25px;
+	color: #000;
+	display: block;
+	margin-top:10px;
+	font-weight: bold;
+}
+.heading {
+  float: left;
+  padding-left: 5%;
+  width: 75%;
+  padding-top: 5px;
+}
+.heading h4 {
+  font-size: 1.2em;
+  color: #ffdd57;
+  margin-top: 7px;
+}
+.heading-desc p {
+    font-size: 0.85em;
+    color: #999;
+    line-height: 1.9em;
+    padding: 5px 0
+}
 @media screen and (min-width: 278px) and (max-width: 400px) {
     .container-fluid {
         width: 100%;
@@ -118,6 +206,42 @@ body.application {
     .navbar-brand {
         font-size: 15px;
     }
+    .about h2 {
+        font-size: 1.6em;
+    }
+    .about-text-left {
+    	padding:0;
+    }
+    .about-text-right h4 {
+        font-size: 1em;
+        line-height: 1.2em;
+    }
+    .about-text-right p {
+        font-size: 0.8em;
+    }
+    .about-text-right{
+	    padding:0;
+    }
+    .about-text-right ul li a {
+        font-size: 0.8em;
+    }
+    .heading h4 {
+        font-size: 1em;
+    }
+    .abt-sec.about_span{
+	    padding:0;
+    }
+    .number figure span {
+        font-size: 1em;
+	    margin-top: 7px;
+    }
+    .number {
+        height: 37px;
+        width: 37px;
+    }
+    .heading-desc p {
+        font-size: 0.8em;
+    }
 }
 
 /* Small devices (tablets, etc.) */
@@ -126,15 +250,12 @@ body.application {
         width: 100%;
         margin: 0 auto;
     }
-
     .row-fluid {
         margin: 5px;
     }
-
     .chart-wrapper {
         margin: 5px;
     }
-
     #games-nd,
     #sales-nd {
         font-size: 20px;
@@ -202,6 +323,15 @@ body.application {
         border-radius: 3px;
         font-size: 14px;
     }
+    .about {
+        padding: 2em 0;
+    }
+    .about-text {
+        margin-top: 2em;
+    }
+    .about h2 {
+        font-size: 2em;
+    }
 }
 
 /* Large devices (large desktops, 993px and up) */
@@ -221,6 +351,22 @@ body.application {
         vertical-align: middle;
         padding: 6px 0;
         font-size: 14px;
+    }
+    .about-text-right{
+	    margin-top:1em;
+    }
+    .about-text-right h4 {
+        font-size: 1.4em;
+    }
+    .heading {
+        padding-left: 2%;
+        padding-top: 0;
+    }
+    .abt-sec.about_span {
+        margin-bottom: 1em;
+    }
+    .about h2{
+        font-size: 2.3em;
     }
 }
 /* Even larger devices (ott desktops, 1200px and up) */
@@ -254,7 +400,10 @@ body.application {
         color: #7a7a7a;
         font-size: 10px;
     }
-    .navbar-brand {
-
+    .about-text-right ul li {
+        margin: 0.5em 0 0;
+    }
+    .about-grids {
+        margin: 3em 0;
     }
 }
