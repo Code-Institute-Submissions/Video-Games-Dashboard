@@ -17,6 +17,7 @@ COLLECTION_NAME = 'projects'
 #DBS_NAME = 'videoGames'
 #COLLECTION_NAME = 'projects'
 
+
 # Route to display charts
 @app.route("/")
 def index():
