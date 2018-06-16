@@ -22,6 +22,12 @@ COLLECTION_NAME = 'projects'
 def index():
     return render_template("main.html")
 
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
 # routing to the database
 @app.route("/videoGames/projects")
 def games_projects():
