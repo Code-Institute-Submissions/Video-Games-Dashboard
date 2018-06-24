@@ -20,6 +20,7 @@ function makeGraphs(error, videoGamesProjects) {
         d["JP_sales"] = +d["JP_sales"];
         d["critic_score"] = +d["critic_score"];
         d["user_score"] = +d["user_score"];
+        d["name"] = +d["name"];
     });
 
     // Crossfilter instance
